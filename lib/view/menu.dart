@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_application_1/view/pesquisa.dart';
 
 class RastrearPedidoPage extends StatelessWidget {
   const RastrearPedidoPage({super.key, required this.title});
@@ -30,7 +31,16 @@ class RastrearPedidoPage extends StatelessWidget {
           Padding(padding: EdgeInsets.all(20.0),child: TextButton(style: TextButton.styleFrom(
     foregroundColor: Color.fromARGB(255, 13, 145, 101),
   ),
-onPressed: () { },child: Text('Pesquisar'),),),
+  onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        const PedidoRastreado(title: "Pedidos"),
+                  ));
+            },
+            child: Text('Entrar'),
+          ),),
         ]
        ),
     );

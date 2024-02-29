@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_application_1/view/menu.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -11,9 +10,9 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(this.title),
+        title: Text(title),
       ),
-      body: Column(children: [
+      body: Center(child: Column(children: [
         const Padding(
             padding: EdgeInsets.all(20.0),
             child: TextField(
@@ -31,10 +30,10 @@ class MyHomePage extends StatelessWidget {
               ),
             )),
         Padding(
-          padding: EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(20.0),
           child: TextButton(
             style: TextButton.styleFrom(
-              foregroundColor: Color.fromARGB(255, 13, 145, 101),
+              foregroundColor:  Color.fromARGB(255, 13, 145, 101),
             ),
             onPressed: () {
               Navigator.push(
@@ -48,6 +47,6 @@ class MyHomePage extends StatelessWidget {
           ),
         ),
       ]),
-    );
+    ),);
   }
 }
