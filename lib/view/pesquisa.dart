@@ -11,8 +11,15 @@ class PedidoRastreado extends StatelessWidget {
       appBar: AppBar(
         title: Text(this.title),
       ),
-      body:
-       Center(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: NetworkImage(
+                "https://img.freepik.com/vetores-gratis/fundo-azul-geometrico-vetor-de-papel-de-parede-da-area-de-trabalho_53876-135927.jpg"), // Substitua pelo URL da sua imagem
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Center(
       child: Card(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -40,6 +47,6 @@ class PedidoRastreado extends StatelessWidget {
           ],
         ),
       ),
-    ),);
+    ),),);
   }
 }
